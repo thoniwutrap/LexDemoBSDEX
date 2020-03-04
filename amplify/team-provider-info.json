@@ -1,0 +1,20 @@
+{
+    "lexbot": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-coffeebotdemo-lexbot-12814-authRole",
+            "UnauthRoleArn": "arn:aws:iam::028027623685:role/amplify-coffeebotdemo-lexbot-12814-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::028027623685:role/amplify-coffeebotdemo-lexbot-12814-authRole",
+            "Region": "ap-southeast-1",
+            "DeploymentBucketName": "amplify-coffeebotdemo-lexbot-12814-deployment",
+            "UnauthRoleName": "amplify-coffeebotdemo-lexbot-12814-unauthRole",
+            "StackName": "amplify-coffeebotdemo-lexbot-12814",
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:028027623685:stack/amplify-coffeebotdemo-lexbot-12814/c2ab4120-540e-11ea-90c4-0a58c7c408be",
+            "AmplifyAppId": "d3u0x44wndqfyp"
+        },
+        "categories": {
+            "auth": {
+                "cognitoa0088d13": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Amazon Lex Demo</string>
+    <string name="screen_options_main_message">Amazon Lex Demo</string>
+</resources>
