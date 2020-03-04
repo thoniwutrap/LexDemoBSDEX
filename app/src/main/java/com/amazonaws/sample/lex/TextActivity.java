@@ -158,27 +158,25 @@ public class TextActivity extends Activity {
                 String botName = null;
                 String botAlias = null;
                 String botRegion = null;
-//                JSONObject lexConfig;
-//                try {
-//                    lexConfig = AWSMobileClient.getInstance().getConfiguration().optJsonObject("PinpointAnalytics");
-//                    Log.e("lexx",lexConfig.getString("PinpointAnalytics"));
-//                    lexConfig = lexConfig.getJSONObject(lexConfig.keys().next());
-//
-//                    botName = lexConfig.getString("Name");
-//                    botAlias = lexConfig.getString("Alias");
-//                    botRegion = lexConfig.getString("Region");
-//                } catch (JSONException e) {
-//                    Log.e(TAG, "onResult: Failed to read configuration", e);
-//                }
+                JSONObject lexConfig;
+               try {
+                    lexConfig = AWSMobileClient.getInstance().getConfiguration().optJsonObject("Lex");
+                    botName = lexConfig.getString("Name");
+                    botAlias = lexConfig.getString("Alias");
+                    botRegion = lexConfig.getString("Region");
+                    Log.e("dd",botRegion.toString() + botName + botAlias);
+                } catch (JSONException e) {
+                    Log.e(TAG, "onResult: Failed to read configuration", e);
+                }
 
                 InteractionConfig lexInteractionConfig = new InteractionConfig(
-                        "PizzeOrder",
-                        "thoniwutr",
+                        botName,
+                        botAlias,
                         identityId);
 
                 lexInteractionClient = new InteractionClient(getApplicationContext(),
                         AWSMobileClient.getInstance(),
-                        Regions.fromName("us-east-1"),
+                        Regions.fromName(botRegion),
                         lexInteractionConfig);
 
                 lexInteractionClient.setAudioPlaybackListener(audioPlaybackListener);
